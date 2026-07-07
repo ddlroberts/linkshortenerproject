@@ -1,8 +1,21 @@
 import { ClerkProvider, SignInButton, SignUpButton, Show, UserButton } from "@clerk/nextjs";
 import { shadcn } from "@clerk/ui/themes";
 import type { Metadata } from "next";
+import localFont from "next/font/local";
 import { Button } from "@/components/ui/button";
 import "./globals.css";
+
+const geistSans = localFont({
+  src: "./fonts/geist-latin.woff2",
+  display: "swap",
+  variable: "--font-geist-sans",
+});
+
+const geistMono = localFont({
+  src: "./fonts/geist-mono-latin.woff2",
+  display: "swap",
+  variable: "--font-geist-mono",
+});
 
 export const metadata: Metadata = {
   title: "Link Shortener",
@@ -17,7 +30,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className="h-full antialiased dark"
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased dark`}
     >
       <body className="min-h-full flex flex-col">
         <ClerkProvider appearance={{ theme: shadcn }}>
