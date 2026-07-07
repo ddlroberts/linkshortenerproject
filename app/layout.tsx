@@ -1,18 +1,18 @@
 import { ClerkProvider, SignInButton, SignUpButton, Show, UserButton } from "@clerk/nextjs";
 import { shadcn } from "@clerk/ui/themes";
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Geist, Geist_Mono } from "next/font/google";
 import { Button } from "@/components/ui/button";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/geist-latin.woff2",
+const geistSans = Geist({
+  subsets: ["latin"],
   display: "swap",
   variable: "--font-geist-sans",
 });
 
-const geistMono = localFont({
-  src: "./fonts/geist-mono-latin.woff2",
+const geistMono = Geist_Mono({
+  subsets: ["latin"],
   display: "swap",
   variable: "--font-geist-mono",
 });
