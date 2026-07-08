@@ -118,12 +118,6 @@ export default async function Home() {
             <SignUpButton mode="modal" forceRedirectUrl="/dashboard">
               <Button>Create your account</Button>
             </SignUpButton>
-            <Link
-              href="#features"
-              className={cn(buttonVariants({ variant: "outline" }), "justify-center")}
-            >
-              Explore the features
-            </Link>
           </div>
         </section>
       </div>
