@@ -38,10 +38,10 @@ export default function RootLayout({
             <span className="font-semibold text-sm">Link Shortener</span>
             <div className="flex items-center gap-3">
                 <Show when="signed-out">
-                <SignInButton>
+                <SignInButton mode="modal" forceRedirectUrl="/dashboard">
                   <Button variant="ghost" size="sm">Sign in</Button>
                 </SignInButton>
-                <SignUpButton>
+                <SignUpButton mode="modal" forceRedirectUrl="/dashboard">
                   <Button variant="default" size="sm">Sign up</Button>
                 </SignUpButton>
               </Show>
